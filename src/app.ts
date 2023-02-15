@@ -21,7 +21,7 @@ const unitsReposiory = new UnitsMockRepository();
 const unitsService = new UnitsService(unitsReposiory);
 const unitsController = new UnitsController(unitsService);
 const unitsRoutes = new UnitsRoutes(unitsController);
-app.use('/units', unitsRoutes.router);
+app.use('/', unitsRoutes.router);
 
 const userRepository = new MockUserRepository();
 const userService = new UserService(userRepository);

@@ -28,6 +28,7 @@ export class LoginController extends Controller {
             });
 
             response.status(200).json({
+                userId: userId,
                 jwtBearerToken: jwtBearerToken,
                 expiresIn: expiresIn
             });

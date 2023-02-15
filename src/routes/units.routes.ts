@@ -11,7 +11,7 @@ export class UnitsRoutes extends Routes {
 
         const validators = [ new AuthValidator() ];
 
-        this.router.get('/', validators.map(val =>  val.validate()), unitsController.getUnits);
+        this.router.get('/:userId/unit', validators.map(val => val.validate()), unitsController.getUnit);
     }
 
     get router() {

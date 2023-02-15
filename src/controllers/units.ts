@@ -8,7 +8,7 @@ export class UnitsController extends Controller {
         super();
     }
 
-    public getUnits: RequestHandler = (request, response, next) => {
-        response.json({ units: this.unitsService.getUnits() });
-    };
+    public getUnit: RequestHandler = (request, response, next) => {
+        response.json(this.unitsService.getUnit(request.params.userId));
+    }
 }
