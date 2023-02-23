@@ -6,8 +6,8 @@ export class UnitsService implements Service {
 
     constructor(private unitsRepository: UnitsRepository) {}
 
-    public getUnit(userId: string): Unit {
-        return this.unitsRepository.getUnit(userId);
+    public getUnits(unitIds: string[]): Unit[] {
+        return this.unitsRepository.getUnits(unitIds);
     }
 
 }

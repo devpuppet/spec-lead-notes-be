@@ -17,16 +17,16 @@ const PORT = 3000;
 app.use(json());
 app.use(cors());
 
-const unitsReposiory = new UnitsMockRepository();
-const unitsService = new UnitsService(unitsReposiory);
-const unitsController = new UnitsController(unitsService);
-const unitsRoutes = new UnitsRoutes(unitsController);
-app.use('/', unitsRoutes.router);
-
 const userRepository = new MockUserRepository();
 const userService = new UserService(userRepository);
 const loginController = new LoginController(userService);
 const loginRoutes = new LoginRoutes(loginController);
 app.use('/login', loginRoutes.router);
+
+const unitsReposiory = new UnitsMockRepository();
+const unitsService = new UnitsService(unitsReposiory);
+const unitsController = new UnitsController(unitsService, userService);
+const unitsRoutes = new UnitsRoutes(unitsController);
+app.use('/', unitsRoutes.router);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

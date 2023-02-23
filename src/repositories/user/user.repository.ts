@@ -5,4 +5,5 @@ export interface UserRepository {
     findUserIdByName(name: string): User;
     getUsers(): User[];
     isValidCredentials(credentials: Credentials): boolean;
+    findUserById(userId: string): User;
 }

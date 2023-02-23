@@ -18,5 +18,9 @@ export class UserService implements Service {
     public isValidCredentials(credentials: Credentials): boolean {
         return this.userRepository.isValidCredentials(credentials);
     }
+
+    public findUserById(userId: string): User {
+        return this.userRepository.findUserById(userId);
+    }
 }
 

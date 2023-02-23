@@ -5,8 +5,8 @@ import { UserRepository } from "./user.repository";
 export class MockUserRepository implements UserRepository {
 
     private users: User[] = [
-        { id: '1', name: "Kamil" },
-        { id: "2", name: "That Guy" }
+        { id: '1', name: "Kamil", unitIds: ["100"] },
+        { id: "2", name: "That Guy", unitIds: ["200"] }
     ];
 
     findUserIdByName(name: string): User {
@@ -26,5 +26,15 @@ export class MockUserRepository implements UserRepository {
     isValidCredentials(credentials: Credentials): boolean {
         const user = this.findUserIdByName(credentials.username);
         return user && credentials.password === 'test';
+    }
+
+    findUserById(userId: string): User {
+        const user = this.users.find(user => user.id === userId);
+
+        if (!user) {
+            throw new Error(`No user with id = ${userId} found`);
+        }
+
+        return user; 
     }
 }

@@ -1,5 +1,7 @@
+import { Person } from "./person";
+
 export interface Unit {
     id: string;
-    userId: string;
     name: string;
+    people: Person[]
 }
