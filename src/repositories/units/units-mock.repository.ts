@@ -7,31 +7,73 @@ export class UnitsMockRepository implements UnitsRepository {
             id: "100",
             name: "SL unit 1",
             people: [{
+                id: "1",
                 name: 'John Doe',
                 meetings: [
                     {
-                        comment: 'Everything good',
-                        attrition: 'None',
-                        date: '01-02-2023'
+                        personId: "1",
+                        notesId: "1",
+                        comments: "Everything going good, cooperation with DM is ok. But coffee in the office could be more tasty",
+                        questions: "1. Project satisfaction 2. Cooperation with DM",
+                        managerActionItems: "Ask administration to order better coffee",
+                        subordinateActionItems: "Try new coffee and write feedback",
+                        importantAgreements: "",
+                        satisfaction: "Happy with project and DM, only issue is coffee",
+                        plans: "",
+                        feedback: "John is skilled engineer",
+                        issues: "",
+                        attritionRisk: "Low",
+                        oneToOneReportSent: true
                     },
                     {
-                        comment: 'Doing great',
-                        attrition: 'None',
-                        date: '11-20-2022'
+                        personId: "1",
+                        notesId: "2",
+                        comments: "Doing great",
+                        questions: "1. Situation on the project 2. Review Engineering goals",
+                        managerActionItems: "Check ISTQB reimbursement policy",
+                        subordinateActionItems: "1. Ask DM to create Delivery goals",
+                        importantAgreements: "",
+                        satisfaction: "Project is good",
+                        plans: "",
+                        feedback: "",
+                        issues: "",
+                        attritionRisk: "None",
+                        oneToOneReportSent: false
                     }]
             },
             {
+                id: "2",
                 name: 'Tom Thompson',
                 meetings: [
                     {
-                        comment: 'Coffe could be more tasty',
-                        attrition: 'Low',
-                        date: '02-25-2023'
+                        personId: "2",
+                        notesId: "3",
+                        comments: "Doing great",
+                        questions: "",
+                        managerActionItems: "Check Azure reimbursement policy",
+                        subordinateActionItems: "",
+                        importantAgreements: "",
+                        satisfaction: "Project is nice",
+                        plans: "",
+                        feedback: "",
+                        issues: "",
+                        attritionRisk: "None",
+                        oneToOneReportSent: false
                     },
                     {
-                        comment: 'Bananas could be more fresh',
-                        attrition: 'Low',
-                        date: '01-25-2023'
+                        personId: "2",
+                        notesId: "4",
+                        comments: "Bananas could be more fresh",
+                        questions: "",
+                        managerActionItems: "",
+                        subordinateActionItems: "",
+                        importantAgreements: "",
+                        satisfaction: "",
+                        plans: "",
+                        feedback: "",
+                        issues: "",
+                        attritionRisk: "None",
+                        oneToOneReportSent: true
                     }]
             }]
         },
@@ -39,31 +81,73 @@ export class UnitsMockRepository implements UnitsRepository {
             id: "200",
             name: "SL unit 2",
             people: [{
+                id: "3",
                 name: 'Kevin Townsend',
                 meetings: [
                     {
-                        comment: 'Other sevelopers are not writing unit tests',
-                        attrition: 'Medium',
-                        date: '02-23-2023'
+                        personId: "3",
+                        notesId: "5",
+                        comments: "test",
+                        questions: "",
+                        managerActionItems: "",
+                        subordinateActionItems: "",
+                        importantAgreements: "",
+                        satisfaction: "",
+                        plans: "",
+                        feedback: "",
+                        issues: "",
+                        attritionRisk: "None",
+                        oneToOneReportSent: true
                     },
                     {
-                        comment: 'There is no code review process',
-                        attrition: 'Medium',
-                        date: '01-23-2023'
+                        personId: "3",
+                        notesId: "6",
+                        comments: "test",
+                        questions: "",
+                        managerActionItems: "",
+                        subordinateActionItems: "",
+                        importantAgreements: "",
+                        satisfaction: "",
+                        plans: "",
+                        feedback: "",
+                        issues: "",
+                        attritionRisk: "None",
+                        oneToOneReportSent: true
                     }]
             },
             {
+                id: "4",
                 name: 'Terry Crews',
                 meetings: [
                     {
-                        comment: 'Office gym is locked',
-                        attrition: 'High',
-                        date: '01-30-2023'
+                        personId: "4",
+                        notesId: "7",
+                        comments: "Office gym is closed",
+                        questions: "",
+                        managerActionItems: "",
+                        subordinateActionItems: "",
+                        importantAgreements: "",
+                        satisfaction: "",
+                        plans: "",
+                        feedback: "",
+                        issues: "",
+                        attritionRisk: "None",
+                        oneToOneReportSent: true
                     },
                     {
-                        comment: 'Weights are too light',
-                        attrition: 'High',
-                        date: '12-14-2022'
+                        personId: "4",
+                        notesId: "8",
+                        comments: "test",
+                        questions: "",
+                        managerActionItems: "",
+                        subordinateActionItems: "",
+                        importantAgreements: "",
+                        satisfaction: "",
+                        plans: "",
+                        feedback: "",
+                        issues: "",
+                        attritionRisk: "None",
+                        oneToOneReportSent: true
                     }]
             }]
         }

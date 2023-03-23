@@ -19,7 +19,7 @@ export class LoginController extends Controller {
     
         if (this.userService.isValidCredentials({ username, password })) {
             const userId = this.userService.findUserIdByName(username).id;
-            const expiresIn = 120;
+            const expiresIn = 1200;
 
             const jwtBearerToken = jwt.sign({}, this.PRIVATE_KEY, {
                 algorithm: 'RS256',
