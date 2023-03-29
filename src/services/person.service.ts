@@ -6,7 +6,7 @@ export class PersonService implements Service {
 
     constructor(private personRepository: PersonRepository) {}
 
-    public addMeetingNotes(unitId: string, meetingNotes: MeetingNotes) {
-        this.personRepository.addMeetingNotes(unitId, meetingNotes);
+    public addMeetingNotes(unitId: string, meetingNotes: MeetingNotes): MeetingNotes {
+        return this.personRepository.addMeetingNotes(unitId, meetingNotes);
     }
 }

@@ -10,7 +10,6 @@ export class PersonController extends Controller {
 
     public addMeetingNotes: RequestHandler = (request, response, next) => {
         const unitId = request.query["unitId"] as string;
-        this.personService.addMeetingNotes(unitId, request.body);
-        response.sendStatus(201);
+        response.status(201).json(this.personService.addMeetingNotes(unitId, request.body));
     }
 }

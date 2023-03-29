@@ -7,7 +7,7 @@ export class PersonMockRepository implements PersonRepository {
 
     constructor(private readonly unitsMockRepository: UnitsMockRepository) {}
 
-    addMeetingNotes(unitId: string, meetingNotes: MeetingNotes): void {
+    addMeetingNotes(unitId: string, meetingNotes: MeetingNotes): MeetingNotes {
         
         const unit = this.unitsMockRepository.getUnits([unitId])[0];
 
@@ -16,8 +16,11 @@ export class PersonMockRepository implements PersonRepository {
         }
 
         const person = this.findPersonById(unit, meetingNotes.personId);
+        meetingNotes.notesId = `${unitId}${meetingNotes.personId}${Date.now().toString()}`;
 
         person.meetings.push(meetingNotes);
+
+        return meetingNotes;
     }
 
     private findPersonById(unit: Unit, personId: string): Person {
