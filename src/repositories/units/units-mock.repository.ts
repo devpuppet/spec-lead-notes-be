@@ -9,6 +9,9 @@ export class UnitsMockRepository implements UnitsRepository {
             people: [{
                 id: "1",
                 name: 'John Doe',
+                grade: "T2",
+                specializations: ['Java', 'Spring'],
+                location: 'Krakow',
                 meetings: [
                     {
                         personId: "1",
@@ -44,6 +47,9 @@ export class UnitsMockRepository implements UnitsRepository {
             {
                 id: "2",
                 name: 'Tom Thompson',
+                grade: "T1",
+                specializations: ['Python'],
+                location: 'Wroclaw',
                 meetings: [
                     {
                         personId: "2",
@@ -83,6 +89,9 @@ export class UnitsMockRepository implements UnitsRepository {
             people: [{
                 id: "3",
                 name: 'Kevin Townsend',
+                grade: "T2",
+                specializations: ['Java', 'Spring'],
+                location: 'Krakow',
                 meetings: [
                     {
                         personId: "3",
@@ -118,6 +127,9 @@ export class UnitsMockRepository implements UnitsRepository {
             {
                 id: "4",
                 name: 'Terry Crews',
+                grade: "T10",
+                specializations: ['Gym', 'Workout'],
+                location: 'US',
                 meetings: [
                     {
                         personId: "4",
