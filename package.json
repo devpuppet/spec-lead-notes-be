@@ -4,6 +4,7 @@
   "description": "SL Notes App - BE",
   "main": "app.js",
   "scripts": {
+    "compile": "tsc",
     "compile:watch": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon dist/app.js",
