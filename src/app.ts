@@ -14,12 +14,18 @@ import { PersonController } from './controllers/person.controller';
 import { PersonRoutes } from './routes/person.routes';
 import { PersonService } from './services/person.service';
 import { PersonMockRepository } from './repositories/person/person-mock.repository';
+import { HealthCheckController } from './controllers/health-check-controller';
+import { HealthCheckRoutes } from './routes/health-check.routes';
 
 const app = express();
 const PORT = 3000;
 
 app.use(json());
 app.use(cors());
+
+const healthCheckController = new HealthCheckController();
+const healthCheckRoutes = new HealthCheckRoutes(healthCheckController);
+app.use('/healthCheck', healthCheckRoutes.router);
 
 const userRepository = new MockUserRepository();
 const userService = new UserService(userRepository);
